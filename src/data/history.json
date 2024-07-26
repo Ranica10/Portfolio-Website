@@ -1,0 +1,35 @@
+[
+    {
+        "role": "IT Developer",
+        "org": "YJSR",
+        "start": "May, 2022",
+        "end": "Present",
+        "description": [
+            "Participated in researching and constructing articles related to STEM fields", 
+            "Published articles as web pages using HTML and GitHub pages"
+        ],
+        "imageSrc": "history/yjsr.png"
+    },
+    {
+        "role": "Production Manager",
+        "org": "The North Star",
+        "start": "Apr, 2023",
+        "end": "Jun, 2024",
+        "description": [
+            "Designed and developed the organization's website through Wordpress", 
+            "Regularly updated and maintained website content"
+        ],
+        "imageSrc": "history/northstar.png"
+    },
+    {
+        "role": "Executive",
+        "org": "North Park Hack Club",
+        "start": "Sept, 2023",
+        "end": "Jun, 2024",
+        "description": [
+            "Teaching over 25 club members the foundational skills in machine learning", 
+            "Independently researching and building knowledge to make weekly lesson plans"
+        ],
+        "imageSrc": "history/hackclub.png"
+    }
+]
