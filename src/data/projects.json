@@ -14,13 +14,5 @@
         "skills": ["C#", "Unity", "Game Dev"],
         "demo": "https://coolio-10.itch.io/pixel-adventure",
         "source": "https://github.com/Ranica10/Pixel-Adventure"
-    },
-    {
-        "title": "Library School System",
-        "imgSrc": "projects/project.png",
-        "description": "This project is cool",
-        "skills": ["HTML", "CSS", "Javascript"],
-        "demo": "https://library-system.static.domains/",
-        "source": "https://github.com/Ranica10/Library-School-System"
     }
 ]
