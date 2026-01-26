@@ -12,21 +12,21 @@ export const About = () => {
                     <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
                     <div className={styles.aboutText}>
                         <h3>Frontend Developer</h3>
-                        <p>I'm a front-end developer with experience in building responsive sites with React and HTML.</p>
+                        <p>I'm a front-end developer with experience in building responsive sites with Vue, React, and HTML.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
                     <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
                     <div className={styles.aboutText}>
-                        <h3>Machine Learning Engineer</h3>
-                        <p>I have experience training deep learning models with Python and image classification through OpenCV.</p>
+                        <h3>Software & AI Projects</h3>
+                        <p>I have experience with machine learning projects in Python and C++, including a credit card approval system using logistic regression and a camera-based attendance system using OpenCV.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
                     <img src={getImageUrl("about/uiIcon.png")} alt="UI icon" />
                     <div className={styles.aboutText}>
-                        <h3>UI Designer</h3>
-                        <p>I have designed multiple site pages through Figma to create visually appealing user interfaces.</p>
+                        <h3>Object-Oriented Development</h3>
+                        <p>I have experience building Java applications using object-oriented programming concepts such as encapsulation, inheritance, and modular design.</p>
                     </div>
                 </li>
             </ul>
