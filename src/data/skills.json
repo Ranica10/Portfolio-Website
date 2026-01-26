@@ -1,5 +1,17 @@
 [
     {
+        "title": "Python",
+        "imageSrc": "skills/python.png"
+    },
+    {
+        "title": "Java",
+        "imageSrc": "skills/java.png"
+    },
+    {
+        "title": "C",
+        "imageSrc": "skills/c.png"
+    },
+    {
         "title": "HTML",
         "imageSrc": "skills/html.png"
     },
@@ -12,12 +24,12 @@
         "imageSrc": "skills/js.png"
     },
     {
-        "title": "React",
-        "imageSrc": "skills/react.png"
+        "title": "Vue",
+        "imageSrc": "skills/vue.png"
     },
     {
-        "title": "Python",
-        "imageSrc": "skills/python.png"
+        "title": "React",
+        "imageSrc": "skills/react.png"
     },
     {
         "title": "C++",

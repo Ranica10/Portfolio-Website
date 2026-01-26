@@ -1,14 +1,25 @@
 [
     {
-        "role": "IT Developer",
-        "org": "YJSR",
-        "start": "May, 2022",
+        "role": "Controls Algorithm Sub-Team Member",
+        "org": "McMaster Exoskeleton Club",
+        "start": "October, 2025",
         "end": "Present",
         "description": [
-            "Participated in researching and constructing articles related to STEM fields", 
-            "Published articles as web pages using HTML and GitHub pages"
+            "Applying feedback control concepts (PD/PID) for joint-level control of a lower-limb exoskeleton", 
+            "Building and experimenting with simulations in MATLAB/Simulink to understand system response and stability"
         ],
-        "imageSrc": "history/yjsr.png"
+        "imageSrc": "history/exoskeleton.png"
+    },
+    {
+        "role": "Application/Software Developer Co-op",
+        "org": "CIBC",
+        "start": "May, 2025",
+        "end": "August, 2025",
+        "description": [
+            "Built responsive front-end features using HTML, CSS, and Vue.js and contributed to debugging and fixing defects", 
+            "Improved accessibility across UI components, completing approximately 33% of the required accessibility updates"
+        ],
+        "imageSrc": "history/cibc.png"
     },
     {
         "role": "Production Manager",
@@ -16,20 +27,9 @@
         "start": "Apr, 2023",
         "end": "Jun, 2024",
         "description": [
-            "Designed and developed the organization's website through Wordpress", 
-            "Regularly updated and maintained website content"
+            "Designed and developed the organization's website through Wordpress, ensuring a fully responsive design optimized for all devices", 
+            "Attracted over 3,000 total views, with each website update increasing unique viewer engagement by approximately 20%"
         ],
         "imageSrc": "history/northstar.png"
-    },
-    {
-        "role": "Executive",
-        "org": "North Park Hack Club",
-        "start": "Sept, 2023",
-        "end": "Jun, 2024",
-        "description": [
-            "Teaching over 25 club members the foundational skills in machine learning", 
-            "Independently researching and building knowledge to make weekly lesson plans"
-        ],
-        "imageSrc": "history/hackclub.png"
     }
 ]
