@@ -8,4 +8,23 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--colour-bg);
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 18% 5%, rgba(87, 108, 188, 0.24), transparent 32rem),
+    radial-gradient(circle at 88% 20%, rgba(25, 55, 109, 0.62), transparent 34rem),
+    linear-gradient(180deg, #04152b 0%, #071c38 48%, #04152b 100%);
+  color: var(--colour-text);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }

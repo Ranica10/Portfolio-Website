@@ -1,32 +1,33 @@
-import React from 'react'
 import { getImageUrl } from '../../utils';
 
 import styles from "./About.module.css";
 
 export const About = () => {
   return <section className={styles.container} id="about">
-        <h2 className={styles.title}>About</h2>
+        <div className={styles.header}>
+            <p className={styles.kicker}>About me</p>
+        </div>
         <div className={styles.content}>
             <ul className={styles.aboutItems}>
                 <li className={styles.aboutItem}>
                     <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
                     <div className={styles.aboutText}>
-                        <h3>Frontend Developer</h3>
-                        <p>I'm a front-end developer with experience in building responsive sites with Vue, React, and HTML.</p>
+                        <h3>Frontend Development</h3>
+                        <p>Building responsive, accessible interfaces with Vue, React, HTML, and CSS.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
                     <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
                     <div className={styles.aboutText}>
                         <h3>Software & AI Projects</h3>
-                        <p>I have experience with machine learning projects in Python and C++, including a credit card approval system using logistic regression and a camera-based attendance system using OpenCV.</p>
+                        <p>Developing machine learning projects in Python and C++, including logistic regression and OpenCV-based systems.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
                     <img src={getImageUrl("about/uiIcon.png")} alt="UI icon" />
                     <div className={styles.aboutText}>
                         <h3>Object-Oriented Development</h3>
-                        <p>I have experience building Java applications using object-oriented programming concepts such as encapsulation, inheritance, and modular design.</p>
+                        <p>Creating Java applications with encapsulation, inheritance, modularity, and maintainable design.</p>
                     </div>
                 </li>
             </ul>

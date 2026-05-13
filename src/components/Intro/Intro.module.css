@@ -2,14 +2,15 @@
 
 .container {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 49px;
+    gap: 58px;
+    min-height: calc(100vh - 98px);
     z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-
+    width: min(1180px, 88%);
+    margin: 0 auto;
+    padding: 76px 0 36px;
 }
 
 .content {
@@ -20,96 +21,205 @@
     z-index: 1;
 }
 
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--colour-border);
+    border-radius: 999px;
+    background: rgba(87, 108, 188, 0.13);
+    color: var(--colour-muted);
+    font-size: 15px;
+    letter-spacing: 0.4px;
+}
+
 .title {
-    font-size: 72px;
+    max-width: 760px;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.95;
     font-weight: 900;
-    margin-bottom: 33px;
+    margin-bottom: 26px;
     font-family: var(--font-roboto);
-    background: linear-gradient(
-        90deg, 
-        rgba(255,255,255,1) 50%, 
-        rgba(255,255,255,0) 120%
-    ); 
+    letter-spacing: -2.5px;
+    background: linear-gradient(90deg, #ffffff 0%, #dbe5ff 55%, #8fa4ff 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 .description {
-    font-size: 30px;
+    max-width: 650px;
+    font-size: clamp(19px, 2vw, 25px);
+    line-height: 1.55;
+    color: var(--colour-muted);
     font-family: var(--font-roboto);
-    margin-bottom: 52px;
+    margin-bottom: 34px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+
+.contactBtn,
+.secondaryBtn {
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 15px 24px;
+    transition: 0.25s ease;
 }
 
 .contactBtn {
-    text-decoration: none;
-    background-color: var(--colour-primary);
+    background: linear-gradient(135deg, var(--colour-primary), #7890f2);
     color: var(--colour-text);
-    border-radius: 100px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 17px 26px;
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 18px 38px rgba(87,108,188,0.3);
+}
+
+.secondaryBtn {
+    color: var(--colour-text);
+    border: 1px solid var(--colour-border);
+    background: rgba(255,255,255,0.06);
+}
+
+.contactBtn:hover,
+.secondaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 46px rgba(87,108,188,0.26);
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(100%, 590px);
+    gap: 12px;
+}
+
+.highlights div {
+    padding: 18px;
+    border: 1px solid var(--colour-border);
+    border-radius: 22px;
+    background: rgba(255,255,255,0.055);
+    backdrop-filter: blur(12px);
+}
+
+.highlights span {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.highlights p {
+    color: var(--colour-muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.visualWrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    border: 1px solid var(--colour-border);
+    border-radius: 38px;
+    background: linear-gradient(145deg, rgba(87, 108, 188, 0.18), rgba(11, 36, 71, 0.52));
+    box-shadow: 0 30px 90px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+.visualWrap::before {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: radial-gradient(circle at 50% 40%, rgba(87,108,188,0.24), transparent 56%);
 }
 
 .profileImg {
-    width: 50%;
+    width: min(100%, 420px);
     z-index: 1;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.34));
+    animation: floating 4s ease-in-out infinite;
+}
 
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+.orbitCard,
+.statusCard {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 16px;
+    border: 1px solid var(--colour-border);
+    border-radius: 999px;
+    background: rgba(4, 21, 43, 0.78);
+    color: var(--colour-muted);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.28);
+    backdrop-filter: blur(12px);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.orbitCard {
+    top: 26px;
+    left: 24px;
+}
+
+.statusCard {
+    right: 24px;
+    bottom: 28px;
 }
 
 @keyframes floating {
-    0% {
-        transform: translate(0,0px);
-    }
-    
-    50% {
-        transform: translate(0,10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(12px); }
+}
 
-    100% {
-        transform: translate(0, -0px);
-    }
+.topBlur,
+.bottomBlur {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(110px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .topBlur {
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-height: 350px;
-    top: -128px;
-    left: -10vw;
-    border-radius: 764px;
-    background: rgba(25,55,109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
+    width: 42vw;
+    height: 42vw;
+    min-width: 320px;
+    min-height: 320px;
+    top: 4%;
+    left: -18vw;
+    background: rgba(25,55,109, 0.78);
 }
 
 .bottomBlur {
-    position: absolute;
-    width: 70vw;
-    height: 50vw;
-    min-width: 350px;
-    min-height: 250px;
-    top: 246px;
-    right: -25vw;
-    border-radius: 764px;
-    background: rgba(25,55,109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
+    width: 52vw;
+    height: 36vw;
+    min-width: 340px;
+    min-height: 240px;
+    bottom: -8%;
+    right: -24vw;
+    background: rgba(87,108,188, 0.28);
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 930px) {
     .container {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
+        padding-top: 56px;
+        gap: 32px;
     }
 
     .content {
         align-items: center;
+        text-align: center;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
     }
 }
