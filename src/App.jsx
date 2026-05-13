@@ -5,6 +5,7 @@ import { Experience } from './components/Experience/Experience';
 import { Intro } from './components/Intro/Intro';
 import { Navbar } from './components/Navbar/Navbar';
 import { Projects } from './components/Projects/Projects';
+import { TechStack } from './components/TechStack/TechStack';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Intro />
       <About />
       <Experience />
+      <TechStack />
       <Projects />
       <Contact />
     </div>

@@ -1,0 +1,114 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(1180px, 88%);
+    margin: 96px auto 0;
+    padding: 48px;
+    border: 1px solid var(--colour-border);
+    border-radius: 34px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(87,108,188,0.28), transparent 34%),
+        linear-gradient(135deg, rgba(4,21,43,0.74), rgba(11,36,71,0.72));
+    box-shadow: 0 28px 90px rgba(0,0,0,0.23);
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: -150px;
+    bottom: -190px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(87,108,188,0.18), transparent 68%);
+    pointer-events: none;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin-bottom: 32px;
+}
+
+.kicker {
+    color: var(--colour-muted);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: var(--colour-text);
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.9px;
+}
+
+.stackGrid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    gap: 15px;
+}
+
+.stackCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-height: 148px;
+    padding: 18px 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    background: rgba(255,255,255,0.055);
+    transition: 0.25s ease;
+}
+
+.stackCard:hover {
+    transform: translateY(-5px);
+    background: rgba(87,108,188,0.16);
+    border-color: rgba(255,255,255,0.22);
+    box-shadow: 0 22px 54px rgba(0,0,0,0.22);
+}
+
+.iconWrap {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.13);
+    background: linear-gradient(135deg, rgba(87,108,188,0.32), rgba(25,55,109,0.92));
+}
+
+.iconWrap img {
+    width: 48px;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+.stackCard p {
+    color: var(--colour-muted);
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 32px 22px;
+    }
+
+    .stackGrid {
+        grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+    }
+}
