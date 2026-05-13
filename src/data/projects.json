@@ -1,16 +1,16 @@
 [
     {
         "title": "Credit Approval Machine",
-        "imgSrc": "projects/project.png",
-        "description": "This project is cool",
-        "skills": ["Python", "Streamlit", "ML"],
+        "imgSrc": "projects/credit-approval.png",
+        "description": "A machine learning web app that predicts credit card approval outcomes using a logistic regression workflow and an interactive Streamlit interface.",
+        "skills": ["Python", "Streamlit", "Machine Learning"],
         "demo": "https://smart-finance-tech-website.streamlit.app/",
         "source": "https://github.com/Ranica10/Smart-Finance-Tech"
     },
     {
         "title": "2D Platformer Game",
-        "imgSrc": "projects/project.png",
-        "description": "This project is cool",
+        "imgSrc": "projects/pixel-adventure.png",
+        "description": "A Unity platformer with custom C# gameplay mechanics, collisions, object interactions, and animated character movement.",
         "skills": ["C#", "Unity", "Game Dev"],
         "demo": "https://coolio-10.itch.io/pixel-adventure",
         "source": "https://github.com/Ranica10/Pixel-Adventure"
