@@ -1,51 +1,43 @@
-import React from 'react'
-
 import { getImageUrl } from '../../utils';
 import styles from "./Experience.module.css";
 
-import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 
-
 export const Experience = () => {
-  return <section className={styles.container} id="experience">
-        <h2 className={styles.title}>Experience</h2>
-        <div className={styles.content}>
-            <div className={styles.skills}>{
-                /* Loop through array of skills and display img + title */
-                skills.map((skill, id) => {
-                    return <div key={id} className={styles.skill}>
-                        <div className={styles.skillImgContainer}>
-                            <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
-                        </div>
-                        <p>{skill.title}</p>
-                    </div>
-                })
-            }</div>
-            <ul className={styles.history}>
-                {/* Loop through array of experiences and display img + title */}
-                {
-                    history.map((item, id) => {
-                        return <li key={id} className={styles.historyItem}>
-                            <img src={getImageUrl(item.imageSrc)} alt={`${item.org} Logo`} />
-                            <div className={styles.historyItemDetails}>
-                                <h3>{`${item.role}, ${item.org}`}</h3>
-                                <p>{`${item.start} - ${item.end}`}</p>
-                                {/* Loop through array of descriptions and display each */}
-                                <ul>
-                                    {
-                                        item.description.map((bullet, id) => {
-                                            return <li key={id}>
-                                                {bullet}
-                                            </li>
-                                        })
-                                    }
-                                </ul>
-                            </div>
-                        </li>
-                    })
-                }
-            </ul>
-        </div>
-  </section>;
+  return (
+    <section className={styles.container} id="experience">
+      <div className={styles.header}>
+        <p className={styles.kicker}>Experience</p>
+      </div>
+
+      <div className={styles.timeline}>
+        {history.map((item, id) => {
+          return (
+            <article key={id} className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>
+                <span>{String(id + 1).padStart(2, "0")}</span>
+              </div>
+
+              <div className={styles.timelineCard}>
+                <div className={styles.cardTop}>
+                  <img src={getImageUrl(item.imageSrc)} alt={`${item.org} Logo`} />
+                  <div>
+                    <p className={styles.date}>{`${item.start} - ${item.end}`}</p>
+                    <h3>{item.role}</h3>
+                    <p className={styles.org}>{item.org}</p>
+                  </div>
+                </div>
+
+                <ul className={styles.description}>
+                  {item.description.map((bullet, id) => {
+                    return <li key={id}>{bullet}</li>;
+                  })}
+                </ul>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
 };

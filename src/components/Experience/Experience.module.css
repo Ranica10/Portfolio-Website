@@ -2,132 +2,200 @@
 
 .container {
     color: var(--colour-text);
-    margin-top: 79px;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: min(1180px, 88%);
+    margin: 96px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    max-width: 850px;
+    margin-bottom: 42px;
+}
+
+.kicker {
+    color: var(--colour-muted);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .title {
     color: var(--colour-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
-    margin-bottom: 65px;
+    font-size: clamp(32px, 4vw, 50px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.1px;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 14px;
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 28px;
+    padding-left: 34px;
 }
 
-.skills {
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 37px;
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 17px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--colour-primary), rgba(255,255,255,0.08));
+    box-shadow: 0 0 24px var(--colour-glow);
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 11px;
+.timelineItem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 20px;
+    align-items: stretch;
 }
 
-.skillImgContainer {
-    background-color: var(--colour-secondary);
-    border-radius: 100%;
+.timelineMarker {
+    position: relative;
+    z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
+    padding-top: 22px;
 }
 
-.skillImgContainer img {
-    width: 75px;
+.timelineMarker span {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: linear-gradient(135deg, var(--colour-primary), var(--colour-secondary));
+    color: var(--colour-text);
+    font-size: 14px;
+    font-weight: 900;
+    box-shadow: 0 0 30px var(--colour-glow);
 }
 
-.skill p {
-    font-size: 25px;
-    font-family: var(--font-roboto);
-    font-weight: 500;
+.timelineCard {
+    position: relative;
+    padding: 28px;
+    border-radius: 30px;
+    border: 1px solid var(--colour-border);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(87,108,188,0.24), transparent 30%),
+        linear-gradient(135deg, rgba(25,55,109,0.78), rgba(4,21,43,0.74));
+    overflow: hidden;
+    transition: 0.25s ease;
 }
 
-.history {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.timelineCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(87,108,188,0.18), transparent 48%);
+    opacity: 0;
+    transition: 0.25s ease;
 }
 
-.historyItem {
-    display: flex;
-    flex-direction: row;
+.timelineCard:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.22);
+    box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+}
+
+.timelineCard:hover::before {
+    opacity: 1;
+}
+
+.cardTop,
+.description {
+    position: relative;
+    z-index: 1;
+}
+
+.cardTop {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 18px;
     align-items: center;
-    gap: 17px;
-    background: #19376d;
-    background: linear-gradient(90deg, #19376d 0%, rgba(25,55,109,0) 100%);
-    border-radius: 10px;
-    padding: 24px;
 }
 
-.historyItem img {
-    width: 60px;
+.cardTop img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    padding: 11px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
-.historyItemDetails {
-    font-family: var(--font-roboto);
+.date {
+    width: fit-content;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: var(--colour-muted);
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.historyItemDetails h3 {
-    font-size: 30px;
-    font-weight: 500;
+.cardTop h3 {
+    font-size: clamp(22px, 2.4vw, 31px);
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -0.5px;
 }
 
-.historyItemDetails p {
-    font-size: 20px;
-    font-weight: 300;
+.org {
+    margin-top: 7px;
+    color: var(--colour-muted);
+    font-size: 17px;
+    font-weight: 700;
 }
 
-.historyItemDetails ul {
-    margin-top: 6px;
-    list-style-position: inside;
-    font-size: 22px;
-    list-style-type: disc;
-    margin-left: 17px;
+.description {
+    display: grid;
+    gap: 10px;
+    margin-top: 22px;
+    margin-left: 18px;
+    color: var(--colour-muted);
+    font-size: 16px;
+    line-height: 1.55;
 }
 
-.historyItemDetails li {
-    padding: 10px;
+.description li {
+    padding-left: 5px;
 }
 
-@media screen and (max-width:830px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-        gap: 34px;
+@media screen and (max-width: 700px) {
+    .timeline {
+        padding-left: 0;
     }
 
-    .skills {
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
+    .timeline::before {
+        left: 24px;
     }
 
-    .history {
-        width: 100%;
-        gap: 9px;
+    .timelineItem {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+    }
+
+    .timelineMarker span {
+        width: 42px;
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .timelineCard {
+        padding: 22px;
+    }
+
+    .cardTop {
+        grid-template-columns: 1fr;
     }
 }
-
-@media screen and (min-width: 1659px) {
-    .skills {
-      padding-top: 8%;
-      row-gap: 80px;
-      padding-bottom: 8%;
-    }
-  }
